@@ -16,7 +16,10 @@
     "stellar-wallets-kit"
   ],
   "license": "Apache-2.0",
-  "repository": "github:paltalabs/soroban-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paltalabs/soroban-react-stellar-wallets-kit.git"
+  },
   "version": "0.0.2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
