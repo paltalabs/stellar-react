@@ -6,7 +6,7 @@ currentDir=$(pwd)
 # Set the name, image and version for the Docker container
 containerName=sorobanReact
 imageName=node
-versionTag=18.18.2
+versionTag=20.18.0
 
 # Display the command being executed
 echo "Command: $1"

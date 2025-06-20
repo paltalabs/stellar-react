@@ -5,6 +5,7 @@ How to develop using a React project?
 1. Make sure this library has the same react version as your react project
 2. In this repo
 ```bash
+bash run.sh # to work with the same docker image
 yarn
 yarn build
 yarn link
