@@ -16,10 +16,12 @@ export async function wrapStellarAsset({
   code,
   issuer,
   sorobanContext,
+  fee = '100',
 }: {
   code: string
   issuer: string
   sorobanContext: SorobanContextType
+  fee?: string
 }) {
   const { activeNetwork, address, sorobanServer } = sorobanContext
   const networkPassphrase = sorobanContext.activeNetwork ?? ''
@@ -40,7 +42,7 @@ export async function wrapStellarAsset({
   })
 
   const txn = new StellarSdk.TransactionBuilder(source, {
-    fee: '100',
+    fee,
     networkPassphrase,
   })
     .addOperation(operation)

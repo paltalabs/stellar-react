@@ -16,10 +16,12 @@ export async function setTrustline({
   tokenSymbol,
   tokenAdmin,
   sorobanContext,
+  fee = '100',
 }: {
   tokenSymbol: string
   tokenAdmin: string
   sorobanContext: SorobanContextType
+  fee?: string
 }) {
   const { activeNetwork, address, horizonServer } = sorobanContext
   const networkPassphrase = sorobanContext.activeNetwork ?? ''
@@ -45,7 +47,7 @@ export async function setTrustline({
   })
 
   const txn = new StellarSdk.TransactionBuilder(source, {
-    fee: '100',
+    fee,
     timebounds: { minTime: 0, maxTime: 0 },
     networkPassphrase,
   })

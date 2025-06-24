@@ -38,7 +38,7 @@ export type WrappedContractInvokeArgs = {
   method: string
   args?: StellarSdk.xdr.ScVal[] | undefined
   signAndSend?: boolean
-  fee?: number
+  fee?: string
   skipAddingFootprint?: boolean
   secretKey?: string
   reconnectAfterTx?: boolean

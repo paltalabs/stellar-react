@@ -9,6 +9,7 @@ export interface contractTransactionProps {
   contractAddress: string
   method: string
   args?: StellarSdk.xdr.ScVal[]
+  fee?: string
 }
 
 /**
@@ -22,12 +23,13 @@ export function contractTransaction({
   contractAddress,
   method,
   args,
+  fee = '100',
 }: contractTransactionProps): StellarSdk.Transaction {
   let myParams: StellarSdk.xdr.ScVal[] = args || []
   const contract = new StellarSdk.Contract(contractAddress)
   return new StellarSdk.TransactionBuilder(source, {
     // TODO: Figure out the fee
-    fee: '100',
+    fee,
     networkPassphrase,
   })
     .addOperation(contract.call(method, ...myParams))

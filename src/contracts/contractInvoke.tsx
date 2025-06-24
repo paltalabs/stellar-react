@@ -18,7 +18,7 @@ export type InvokeArgs = {
   method: string
   args?: StellarSdk.xdr.ScVal[] | undefined
   signAndSend?: boolean
-  fee?: number
+  fee?: string
   skipAddingFootprint?: boolean
   secretKey?: string
   sorobanContext: SorobanContextType
@@ -41,7 +41,7 @@ export async function contractInvoke({
   method,
   args = [],
   signAndSend = false,
-  fee = 100,
+  fee = '100',
   skipAddingFootprint,
   secretKey,
   sorobanContext,
@@ -91,6 +91,7 @@ export async function contractInvoke({
     contractAddress,
     method,
     args,
+    fee
   })
   
 

@@ -18,6 +18,11 @@ yarn link soroban-react-stellar-wallets-kit
 
 Once you have done some changes, do `yarn build` again.
 
+4. Outside the docker image
+```
+npm publish
+```
+
 ---
 
 Made by ❤️ by the PaltaLabs 🥑 team.
