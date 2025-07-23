@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/paltalabs/soroban-react-stellar-wallets-kit.git"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
